@@ -3,6 +3,7 @@
 ## Forms
 
 ### Special-forms
+
 ##### (let sym val)
 Creates a new binding of `sym` to the value `val` in the current environment.
 
@@ -36,6 +37,7 @@ nil
 
 ##### (mac params ...)
 Creates a new *macro*.
+
 ```clojure
 > (= incr (mac (x) (list '= x (list '+ x 1))))
 nil
@@ -83,6 +85,7 @@ value is returned — `nil` is returned if no arguments are true.
 Evaluates each of its arguments and returns the value of the last one.
 
 ### Functions
+
 ##### (cons car cdr)
 Creates a new pair with the given `car` and `cdr` values.
 
@@ -129,6 +132,12 @@ Returns true if the numerical value `a` is less than `b`.
 
 ##### (<= a b)
 Returns true if the numerical value `a` is less than or equal to `b`.
+
+##### (> a b)
+Returns true if the numerical value `a` is more than `b`.
+
+##### (>= a b)
+Returns true if the numerical value `a` is more than or equal to `b`.
 
 ##### (+ ...)
 Adds all its arguments together.
