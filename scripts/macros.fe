@@ -1,6 +1,5 @@
-(= push (mac (val lst)
-  (list '= lst (list 'cons val lst))
-))
+(= push (mac (val sym)
+    (list = sym (list cons val sym))))
 
 
 (= for (mac (item lst . body)

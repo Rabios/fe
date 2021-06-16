@@ -1,0 +1,27 @@
+; Simple program to make object, Don't worry about that stuff!
+(do
+  ; Value from list by index
+  (= nth (fn (n lst)
+    (while (< 0 n)
+      (= n (- n 1))
+      (= lst (cdr lst)))
+    (if (is n 0) (car lst))
+  ))
+  
+  ; Trick to make Structs ;)
+  ; Create list storing cons(s), Like structs in C
+  (= obj (list
+    (cons "A" 1)
+    (cons "B" 2)
+    (cons "C" 3)
+    (cons "D" 4)
+  ))
+  
+  ; Get struct prop (Remember that list works like array)
+  (print (car (nth 3 obj)))
+  (print (cdr (nth 3 obj)))
+  
+  (if (is (car (nth 3 obj)) "D")
+    (print "STRUCTS IMPLEMENTATION WORKED!")
+  )
+)
